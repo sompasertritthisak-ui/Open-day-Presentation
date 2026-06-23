@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PBIS Open Day 2026 — CEO Presentation</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --green:#0a2818;
+  --green2:#1a4a2a;
+  --green3:#0d3520;
+  --gold:#c9a84c;
+  --gold-light:#e8c96e;
+  --gold-pale:#f5e9c4;
+  --white:#ffffff;
+  --off-white:#f8f5ee;
+  --cream:#f0ece3;
+  --gray:#9a9080;
+  --soft-gray:#e8e4de;
+  --text-muted:#c8bfb5;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#1a1a1a;
+  display:flex;flex-direction:column;align-items:center;
+  gap:32px;padding:40px 20px;
+}
+
+.controls{
+  position:fixed;top:20px;right:20px;z-index:1000;
+  display:flex;gap:10px;
+}
+.ctrl-btn{
+  background:var(--gold);color:var(--green);
+  border:none;padding:8px 16px;border-radius:6px;
+  font-family:'Inter',sans-serif;font-size:12px;font-weight:700;
+  cursor:pointer;text-transform:uppercase;letter-spacing:0.05em;
+}
+.ctrl-btn:hover{background:var(--gold-light);}
+
+/* Slide container */
+.slide{
+  width:1280px;height:720px;
+  position:relative;overflow:hidden;
+  border-radius:4px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.5);
+  flex-shrink:0;
+}
+
+/* ══ SLIDE 1 — TITLE ══ */
+.s1{background:var(--green);}
+.s1 .glow-tr{
+  position:absolute;top:-120px;right:-100px;
+  width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,168,76,0.18) 0%,transparent 70%);
+}
+.s1 .glow-bl{
+  position:absolute;bottom:-100px;left:-100px;
+  width:380px;height:380px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,168,76,0.12) 0%,transparent 70%);
+}
+.s1 .gold-top{position:absolute;top:0;left:0;right:0;height:5px;background:var(--gold);}
+.s1 .gold-bottom{position:absolute;bottom:0;left:0;right:0;height:5px;background:var(--gold);}
+.s1 .anniversary{
+  position:absolute;top:36px;left:48px;
+  background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.35);
+  border-radius:100px;padding:6px 18px;
+  font-size:10px;font-weight:700;letter-spacing:0.14em;color:var(--gold);text-transform:uppercase;
+}
+.s1 .school-name{
+  position:absolute;top:90px;left:48px;
+  font-size:11px;font-weight:600;letter-spacing:0.16em;
+  color:rgba(201,168,76,0.7);text-transform:uppercase;
+}
+.s1 .main-title{
+  position:absolute;top:130px;left:48px;right:420px;
+  font-family:'Playfair Display',serif;
+}
+.s1 .main-title h1{font-size:62px;font-weight:800;color:var(--white);line-height:1.0;margin-bottom:8px;}
+.s1 .main-title h2{font-size:46px;font-weight:700;font-style:italic;color:var(--gold-light);line-height:1.1;}
+.s1 .gold-bar{
+  position:absolute;top:350px;left:48px;
+  width:220px;height:3px;background:var(--gold);
+}
+.s1 .subtitle{
+  position:absolute;top:368px;left:48px;right:420px;
+  font-size:14px;color:rgba(255,255,255,0.65);line-height:1.65;
+}
+.s1 .bottom-bar{
+  position:absolute;bottom:0;left:0;right:0;height:56px;
+  background:rgba(201,168,76,0.15);border-top:1px solid rgba(201,168,76,0.2);
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  font-size:12px;color:var(--green);
+}
+.s1 .bottom-bar span{font-weight:700;color:var(--green);}
+.s1 .bottom-bar .dot{color:var(--green);opacity:0.5;}
+/* Right side decorative circles */
+.s1 .deco-circles{position:absolute;right:48px;top:80px;width:340px;height:560px;}
+.s1 .deco-circles .c1{
+  position:absolute;right:0;top:60px;width:260px;height:260px;border-radius:50%;
+  border:1px solid rgba(201,168,76,0.2);
+  display:flex;align-items:center;justify-content:center;
+}
+.s1 .deco-circles .c2{
+  position:absolute;right:30px;top:90px;width:200px;height:200px;border-radius:50%;
+  border:1px solid rgba(201,168,76,0.12);
+}
+.s1 .deco-circles .c3{
+  position:absolute;right:60px;top:120px;width:140px;height:140px;border-radius:50%;
+  background:rgba(201,168,76,0.06);
+}
+.s1 .deco-circles .badge{
+  position:absolute;right:60px;top:340px;
+  font-size:48px;
+}
+
+/* ══ COMMON HEADER ══ */
+.slide-header{
+  position:absolute;top:0;left:0;right:0;height:100px;
+  background:linear-gradient(135deg,#071e10 0%,#0a2818 100%);
+  padding:16px 48px 0;
+}
+.slide-header .tag{
+  font-size:9px;font-weight:700;letter-spacing:0.16em;
+  color:var(--gold);text-transform:uppercase;margin-bottom:6px;
+}
+.slide-header h2{
+  font-family:'Playfair Display',serif;font-size:30px;font-weight:700;
+  color:var(--white);
+}
+.slide-header .gold-sub{color:var(--gold-light);}
+
+/* ══ SLIDE 2 — EXEC SUMMARY ══ */
+.s2{background:var(--off-white);}
+.s2 .stats-row{
+  position:absolute;top:118px;left:48px;right:48px;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+  height:440px;
+}
+.stat-card{
+  background:var(--white);border-radius:12px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.08);
+  overflow:hidden;display:flex;flex-direction:column;
+}
+.stat-card .card-top{
+  padding:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  height:120px;
+}
+.stat-card .big-num{
+  font-family:'Playfair Display',serif;font-size:64px;font-weight:800;
+  color:var(--gold-light);line-height:1;
+}
+.stat-card .unit{
+  font-size:13px;font-weight:700;color:var(--white);
+  margin-top:4px;letter-spacing:0.04em;
+}
+.stat-card .card-body{
+  flex:1;padding:20px 16px;
+  font-size:12px;color:var(--gray);line-height:1.6;text-align:center;
+}
+.s2 .tagline-bar{
+  position:absolute;bottom:24px;left:48px;right:48px;
+  background:var(--gold-pale);border-radius:10px;padding:14px 24px;
+  font-size:13px;font-style:italic;color:var(--green);text-align:center;
+  font-family:'Playfair Display',serif;
+}
+
+/* ══ SLIDE 3 — LANDING PAGE ══ */
+.s3{background:var(--green);}
+.s3 .features-grid{
+  position:absolute;top:112px;left:48px;right:48px;bottom:28px;
+  display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,1fr);
+  gap:12px;
+}
+.feat-card{
+  background:rgba(13,53,32,0.9);border:1px solid rgba(201,168,76,0.15);
+  border-radius:10px;padding:18px 16px;
+  display:flex;flex-direction:column;align-items:flex-start;gap:8px;
+  transition:border-color 0.2s;
+}
+.feat-card .f-icon{font-size:24px;margin-bottom:2px;}
+.feat-card .f-title{font-size:12px;font-weight:700;color:var(--gold-light);letter-spacing:0.02em;}
+.feat-card .f-desc{font-size:10px;color:var(--text-muted);line-height:1.55;}
+
+/* ══ SLIDE 4 — ADMIN DASHBOARD ══ */
+.s4{background:var(--off-white);}
+.s4 .tabs-grid{
+  position:absolute;top:112px;left:48px;right:48px;bottom:24px;
+  display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);
+  gap:14px;
+}
+.tab-card{
+  background:var(--white);border-radius:10px;
+  box-shadow:0 3px 14px rgba(0,0,0,0.07);
+  overflow:hidden;
+}
+.tab-card .tc-header{
+  padding:14px 18px;display:flex;align-items:center;gap:10px;
+}
+.tab-card .tc-title{font-size:13px;font-weight:700;color:var(--gold-light);}
+.tab-card .tc-body{
+  padding:12px 18px;font-size:11px;color:var(--gray);line-height:1.6;
+}
+
+/* ══ SLIDE 5 — EMAIL ══ */
+.s5{background:var(--green);}
+.s5 .emails-list{
+  position:absolute;top:112px;left:48px;right:48px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.email-row{
+  background:rgba(13,53,32,0.9);border:1px solid rgba(201,168,76,0.12);
+  border-radius:8px;padding:14px 20px;
+  display:grid;grid-template-columns:160px 160px 1fr;align-items:center;gap:16px;
+}
+.email-badge{
+  border-radius:6px;padding:6px 12px;
+  font-size:10px;font-weight:700;color:var(--gold-light);
+  display:flex;align-items:center;gap:6px;
+  white-space:nowrap;
+}
+.email-to{font-size:11px;font-weight:700;color:var(--gold);}
+.email-desc{font-size:10px;color:var(--text-muted);line-height:1.5;}
+
+/* ══ SLIDE 6 — SHEETS ══ */
+.s6{background:var(--off-white);}
+.s6 .sheets-col{
+  position:absolute;top:108px;left:48px;right:48px;
+  display:flex;flex-direction:column;gap:14px;
+}
+.sheet-card{
+  background:var(--white);border-radius:10px;
+  box-shadow:0 3px 14px rgba(0,0,0,0.07);
+  overflow:hidden;
+}
+.sheet-header{padding:12px 20px;display:flex;align-items:center;justify-content:space-between;}
+.sheet-name{font-size:13px;font-weight:700;color:var(--gold-light);}
+.sheet-desc{font-size:11px;color:rgba(255,255,255,0.5);font-style:italic;}
+.sheet-cols{padding:10px 16px 12px;display:flex;gap:6px;flex-wrap:wrap;}
+.col-chip{
+  background:var(--soft-gray);border-radius:4px;
+  padding:3px 8px;font-size:9px;font-weight:600;color:var(--green);
+}
+
+/* ══ SLIDE 7 — TECH ══ */
+.s7{background:var(--green);}
+.s7 .two-col{
+  position:absolute;top:112px;left:48px;right:48px;bottom:28px;
+  display:grid;grid-template-columns:1fr 1fr;gap:16px;
+}
+.tech-panel{
+  background:rgba(13,53,32,0.9);border:1px solid rgba(201,168,76,0.15);
+  border-radius:12px;padding:24px;
+}
+.tech-panel .panel-title{
+  font-size:11px;font-weight:700;letter-spacing:0.12em;color:var(--gold);
+  text-transform:uppercase;margin-bottom:16px;
+  display:flex;align-items:center;gap:8px;
+}
+.tech-item{
+  display:flex;align-items:flex-start;gap:10px;
+  margin-bottom:12px;
+}
+.tech-item .arrow{color:var(--gold);font-size:11px;margin-top:1px;flex-shrink:0;}
+.tech-item .text{font-size:11px;color:var(--text-muted);line-height:1.5;}
+
+/* ══ SLIDE 8 — JOURNEY ══ */
+.s8{background:var(--off-white);}
+.s8 .steps-grid{
+  position:absolute;top:108px;left:48px;right:48px;bottom:24px;
+  display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,1fr);
+  gap:12px;
+}
+.step-card{
+  background:var(--white);border-radius:10px;
+  box-shadow:0 3px 14px rgba(0,0,0,0.07);
+  overflow:hidden;
+}
+.step-card .step-top{
+  padding:12px 16px;display:flex;align-items:center;gap:10px;
+}
+.step-num{
+  width:32px;height:32px;border-radius:50%;
+  background:rgba(201,168,76,0.15);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:16px;font-weight:800;color:var(--gold-light);
+  flex-shrink:0;
+}
+.step-title{font-size:12px;font-weight:700;color:var(--gold-light);}
+.step-desc{padding:0 16px 14px;font-size:10.5px;color:var(--gray);line-height:1.55;}
+
+/* ══ SLIDE 9 — DEPLOYMENT ══ */
+.s9{background:var(--green);}
+.s9 .deploy-grid{
+  position:absolute;top:112px;left:48px;right:48px;bottom:28px;
+  display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,1fr);
+  gap:10px;
+}
+.deploy-card{
+  background:rgba(13,53,32,0.9);border:1px solid rgba(201,168,76,0.12);
+  border-radius:8px;padding:12px 18px;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.deploy-label{font-size:9px;font-weight:700;letter-spacing:0.1em;color:var(--gold);text-transform:uppercase;margin-bottom:4px;}
+.deploy-val{font-size:12px;color:var(--white);font-weight:500;}
+
+/* ══ SLIDE 10 — CLOSING ══ */
+.s10{background:var(--green);}
+.s10 .gold-top{position:absolute;top:0;left:0;right:0;height:5px;background:var(--gold);}
+.s10 .gold-bottom{position:absolute;bottom:0;left:0;right:0;height:5px;background:var(--gold);}
+.s10 .glow-tr{
+  position:absolute;top:-120px;right:-100px;width:480px;height:480px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,168,76,0.15) 0%,transparent 70%);
+}
+.s10 .glow-bl{
+  position:absolute;bottom:-100px;left:-100px;width:360px;height:360px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,168,76,0.10) 0%,transparent 70%);
+}
+.s10 .center-content{
+  position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:0;
+}
+.s10 .badge{
+  background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);
+  border-radius:100px;padding:6px 20px;
+  font-size:10px;font-weight:700;letter-spacing:0.14em;color:var(--gold);
+  text-transform:uppercase;margin-bottom:18px;
+}
+.s10 .school{
+  font-size:11px;font-weight:600;letter-spacing:0.16em;
+  color:rgba(201,168,76,0.6);text-transform:uppercase;margin-bottom:20px;
+}
+.s10 .motto{
+  font-family:'Playfair Display',serif;font-size:44px;font-style:italic;
+  color:var(--gold);margin-bottom:14px;text-align:center;
+}
+.s10 .gold-bar{width:200px;height:3px;background:var(--gold);margin-bottom:18px;}
+.s10 .sys-title{
+  font-family:'Playfair Display',serif;font-size:20px;font-weight:700;
+  color:var(--white);margin-bottom:32px;text-align:center;
+}
+.s10 .outcomes{display:flex;gap:14px;margin-bottom:28px;}
+.outcome-box{
+  background:rgba(13,53,32,0.9);border:1px solid rgba(201,168,76,0.2);
+  border-radius:10px;padding:16px 20px;text-align:center;
+  min-width:160px;
+}
+.outcome-box .o-icon{font-size:24px;margin-bottom:8px;}
+.outcome-box .o-text{font-size:11px;color:var(--gold-light);line-height:1.4;}
+.s10 .credits{
+  font-size:11px;color:rgba(255,255,255,0.3);text-align:center;
+}
+
+/* Slide counter */
+.slide-counter{
+  position:absolute;bottom:14px;right:20px;
+  font-size:10px;color:rgba(255,255,255,0.25);letter-spacing:0.08em;
+}
+.slide-counter.dark{color:rgba(0,0,0,0.2);}
+
+/* Print / export hint */
+.hint{
+  background:#333;color:#aaa;padding:16px 32px;border-radius:8px;
+  font-size:13px;text-align:center;line-height:1.6;max-width:900px;
+}
+.hint strong{color:var(--gold);}
+
+@media print{
+  body{background:white;gap:0;padding:0;}
+  .controls,.hint{display:none;}
+  .slide{border-radius:0;box-shadow:none;page-break-after:always;}
+}
+</style>
+</head>
+<body>
+
+<div class="controls">
+  <button class="ctrl-btn" onclick="window.print()">🖨 Print / Export PDF</button>
+</div>
+
+<div class="hint">
+  <strong>How to import to Canva:</strong> Click "Print / Export PDF" above → Save as PDF → Open Canva → Create Design → Import PDF → Each slide becomes an editable page. &nbsp;|&nbsp; Or screenshot each slide individually at full resolution.
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SLIDE 1 — TITLE -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="slide s1">
+  <div class="gold-top"></div>
+  <div class="gold-bottom"></div>
+  <div class="glow-tr"></div>
+  <div class="glow-bl"></div>
+  <div class="anniversary">🎓 &nbsp;EST. 2001 &nbsp;·&nbsp; 25TH ANNIVERSARY</div>
+  <div class="school-name">Panyathip British International School</div>
+  <div class="main-title">
+    <h1>PBIS Open Day 2026</h1>
+    <h2>Digital Admissions System</h2>
+  </div>
+  <div class="gold-bar"></div>
+  <div class="subtitle">A Comprehensive End-to-End Digital Platform for<br>Lead Management, Parent Engagement & Admissions Tracking</div>
+  <div class="deco-circles">
+    <div class="c1"></div>
+    <div class="c2"></div>
+    <div class="c3"></div>
+    <div class="badge">🏫</div>
+  </div>
+  <div class="bottom-bar" style="background:rgba(201,168,76,0.18);color:#0a2818;">
+    <span>Prepared by: Marketing & Media Team</span>
+    <span class="dot">·</span>
+    <span>openday.pbis.edu.la</span>
+    <span class="dot">·</span>
+    <span>July 2026</span>
+  </div>
+  <div class="slide-counter">01 / 10</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SLIDE 2 — EXECUTIVE SUMMARY -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="slide s2">
+  <div class="slide-header">
+    <div class="tag">Executive Summary</div>
+    <h2>What We Built & <span class="gold-sub">Why</span></h2>
+  </div>
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="card-top" style="background:linear-gradient(135deg,#0a2818,#1a4a2a);">
+        <div class="big-num">1</div>
+        <div class="unit">Single File</div>
+      </div>
+      <div class="card-body">Entire system — landing page + full admin dashboard in one HTML file. No server required.</div>
+    </div>
+    <div class="stat-card">
+      <div class="card-top" style="background:linear-gradient(135deg,#1a4a2a,#2a6a3a);">
+        <div class="big-num">6</div>
+        <div class="unit">Dashboard Tabs</div>
+      </div>
+      <div class="card-body">Overview · Tour Requests · Pipeline · Calendar · Schedule · Overdue tracking</div>
+    </div>
+    <div class="stat-card">
+      <div class="card-top" style="background:linear-gradient(135deg,#2a5a3a,#3a7a4a);">
+        <div class="big-num">31</div>
+        <div class="unit">Languages</div>
+      </div>
+      <div class="card-body">Google Translate integration for all international families. Lao, Chinese, Thai, Korean and more.</div>
+    </div>
+    <div class="stat-card">
+      <div class="card-top" style="background:linear-gradient(135deg,#0a3a28,#1a5a38);">
+        <div class="big-num">4</div>
+        <div class="unit">Google Sheets</div>
+      </div>
+      <div class="card-body">Sheet1 · Pipeline Leads · Overdue · Real-time data sync via Google Apps Script.</div>
+    </div>
+  </div>
+  <div class="tagline-bar">
+    "Become the best you can be." — PBIS &nbsp;·&nbsp; The complete digital journey from parent discovery to enrolled student.
+  </div>
+  <div class="slide-counter dark">02 / 10</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SLIDE 3 — LANDING PAGE -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="slide s3">
+  <div class="slide-header">
+    <div class="tag">Parent-Facing Platform</div>
+    <h2>Landing Page — <span class="gold-sub">What Parents See</span></h2>
+  </div>
+  <div class="features-grid">
+    <div class="feat-card">
+      <div class="f-icon">🎓</div>
+      <div class="f-title">Hero Section</div>
+      <div class="f-desc">Campus photo with live countdown timer, 4 info cards, dual CTA buttons, British motto</div>
+    </div>
+    <div class="feat-card">
+      <div class="f-icon">🏫</div>
+      <div class="f-title">360° Virtual Tour</div>
+      <div class="f-desc">Embedded Panoee/Kuula tours for Primary, Secondary & Early Years campuses</div>
+    </div>
+    <div class="feat-card">
+      <div class="f-icon">🎁</div>
+      <div class="f-title">Exclusive Promotions</div>
+      <div class="f-desc">Reg Fee 50% Off · Bandith Coupon 1,000,000 Kip · Summer Camp 30% Off with countdown</div>
+    </div>
+    <div class="feat-card">
+      <div class="f-icon">📝</div>
+      <div class="f-title">Smart Registration</div>
+      <div class="f-desc">Dynamic children fields, campus-specific grade levels, academic terms to 2030</div>
+    </div>
+    <div class="feat-card">
+      <div class="f-icon">📍</div>
+      <div class="f-title">3 Campus Maps</div>
+      <div class="f-desc">Interactive Google Maps embedded for EY, Primary & Secondary campuses</div>
+    </div>
+    <div class="feat-card">
+      <div class="f-icon">🌐</div>
+      <div class="f-title">31 Languages</div>
+      <div class="f-desc">Full Google Translate integration — Lao, Chinese, Thai, Korean, Japanese and 26 more</div>
+    </div>
+    <div class="feat-card">
+      <div class="f-icon">📱</div>
+      <div class="f-title">Mobile Optimised</div>
+      <div class="f-desc">Fully responsive for iOS & Android. Portrait hero image, touch-friendly CTAs</div>
+    </div>
+    <div class="feat-card">
+      <div class="f-icon">📧</div>
+      <div class="f-title">Instant Email</div>
+      <div class="f-desc">Branded confirmation emails sent immediately on registration. No manual effort.</div>
+    </div>
+  </div>
+  <div class="slide-counter">03 / 10</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SLIDE 4 — ADMIN DASHBOARD -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="slide s4">
+  <div class="slide-header">
+    <div class="tag">Internal Management Tool</div>
+    <h2>Admin Dashboard — <span class="gold-sub">6 Tabs</span></h2>
+  </div>
+  <div class="tabs-grid">
+    <div class="tab-card">
+      <div class="tc-header" style="background:#0a3d20;">
+        <span style="font-size:20px;">📊</span>
+        <div class="tc-title">Overview</div>
+      </div>
+      <div class="tc-body">Live stats: Total registrations, Approved, Declined, Pending, Translator requests. Charts and quick-action buttons.</div>
+    </div>
+    <div class="tab-card">
+      <div class="tc-header" style="background:#1a4a2a;">
+        <span style="font-size:20px;">🗓</span>
+        <div class="tc-title">Tour Requests</div>
+      </div>
+      <div class="tc-body">Full table of all registrations. Approve / Decline / Reschedule each booking. Inline enrollment status per lead.</div>
+    </div>
+    <div class="tab-card">
+      <div class="tc-header" style="background:#2d5a3a;">
+        <span style="font-size:20px;">📈</span>
+        <div class="tc-title">Leads Pipeline</div>
+      </div>
+      <div class="tc-body">Kanban board with 6 stages: Interested → Toured → Considering → Enrolled → Undecided → Not Enrolling.</div>
+    </div>
+    <div class="tab-card">
+      <div class="tc-header" style="background:#0a3d20;">
+        <span style="font-size:20px;">📅</span>
+        <div class="tc-title">Calendar</div>
+      </div>
+      <div class="tc-body">Monthly calendar view of all confirmed tour dates. Open Day pinned on 8 July 2026.</div>
+    </div>
+    <div class="tab-card">
+      <div class="tc-header" style="background:#1a4a2a;">
+        <span style="font-size:20px;">📋</span>
+        <div class="tc-title">Schedule</div>
+      </div>
+      <div class="tc-body">Structured daily schedule view for Open Day logistics and admissions team coordination.</div>
+    </div>
+    <div class="tab-card">
+      <div class="tc-header" style="background:#5a1a1a;">
+        <span style="font-size:20px;">⚠️</span>
+        <div class="tc-title">Overdue</div>
+      </div>
+      <div class="tc-body">No-show tracking. Mark parents who didn't attend. Send branded follow-up emails. Add personalised notes.</div>
+    </div>
+  </div>
+  <div class="slide-counter dark">04 / 10</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SLIDE 5 — EMAIL AUTOMATION -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="slide s5">
+  <div class="slide-header">
+    <div class="tag">Automated Communications</div>
+    <h2>Branded Email <span class="gold-sub">Automation System</span></h2>
+  </div>
+  <div class="emails-list">
+    <div class="email-row">
+      <div class="email-badge" style="background:#1a4a2a;">🔔 New Registration</div>
+      <div class="email-to">→ Admissions Team</div>
+      <div class="email-desc">Branded HTML notification with full parent details, campus, children count, translator flag, and ACTION REQUIRED banner. Sent to admissions@pbis.edu.la.</div>
+    </div>
+    <div class="email-row">
+      <div class="email-badge" style="background:#0a3d20;">✅ Tour Approved</div>
+      <div class="email-to">→ Parent</div>
+      <div class="email-desc">Confirmed visit: Date, Time, Campus, Location with Google Maps button. Green header. PBIS logo top-left. "Arrive by 8:45 AM" instruction.</div>
+    </div>
+    <div class="email-row">
+      <div class="email-badge" style="background:#5a0a0a;">❌ Tour Declined</div>
+      <div class="email-to">→ Parent</div>
+      <div class="email-desc">Professional decline with red header. Warm tone maintained. Encourages re-engagement. Admissions contact details included.</div>
+    </div>
+    <div class="email-row">
+      <div class="email-badge" style="background:#2d1a5c;">📅 Rescheduled</div>
+      <div class="email-to">→ Parent</div>
+      <div class="email-desc">Purple header with proposed new date/time highlighted. Parent prompted to confirm. Direct contact details for questions.</div>
+    </div>
+    <div class="email-row">
+      <div class="email-badge" style="background:#0a3530;">💛 We Missed You</div>
+      <div class="email-to">→ Parent (No-Show)</div>
+      <div class="email-desc">Warm follow-up for Open Day no-shows. Offers private campus tour. Optional personalised note added by admissions team.</div>
+    </div>
+  </div>
+  <div class="slide-counter">05 / 10</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SLIDE 6 — GOOGLE SHEETS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="slide s6">
+  <div class="slide-header">
+    <div class="tag">Data Infrastructure</div>
+    <h2>Google Sheets — <span class="gold-sub">Real-Time Data Sync</span></h2>
+  </div>
+  <div class="sheets-col">
+    <div class="sheet-card">
+      <div class="sheet-header" style="background:#0a2818;">
+        <span class="sheet-name">📊 Sheet1 — Registrations</span>
+        <span class="sheet-desc">All Open Day registrations from the landing page form</span>
+      </div>
+      <div class="sheet-cols">
+        <span class="col-chip">Timestamp</span><span class="col-chip">First Name</span><span class="col-chip">Last Name</span><span class="col-chip">Nationality</span><span class="col-chip">Phone</span><span class="col-chip">Email</span><span class="col-chip">Campus</span><span class="col-chip">Children</span><span class="col-chip">Translator</span><span class="col-chip">Source</span><span class="col-chip">Status</span><span class="col-chip">Enrol Status</span><span class="col-chip">Notes</span>
+      </div>
+    </div>
+    <div class="sheet-card">
+      <div class="sheet-header" style="background:#1a4a2a;">
+        <span class="sheet-name">📈 Pipeline Leads</span>
+        <span class="sheet-desc">Manual leads + approved tours with enrollment tracking</span>
+      </div>
+      <div class="sheet-cols">
+        <span class="col-chip">Timestamp</span><span class="col-chip">First Name</span><span class="col-chip">Last Name</span><span class="col-chip">Phone</span><span class="col-chip">Email</span><span class="col-chip">Campus</span><span class="col-chip">Children</span><span class="col-chip">Enrollment Stage</span><span class="col-chip">Source</span><span class="col-chip">Assigned To</span><span class="col-chip">Notes</span>
+      </div>
+    </div>
+    <div class="sheet-card">
+      <div class="sheet-header" style="background:#5a1a1a;">
+        <span class="sheet-name">⚠️ Overdue</span>
+        <span class="sheet-desc">No-show tracking with follow-up email status</span>
+      </div>
+      <div class="sheet-cols">
+        <span class="col-chip">Timestamp</span><span class="col-chip">First Name</span><span class="col-chip">Last Name</span><span class="col-chip">Phone</span><span class="col-chip">Email</span><span class="col-chip">Campus</span><span class="col-chip">Added to Overdue</span><span class="col-chip">Notes</span><span class="col-chip">Callback Sent</span>
+      </div>
+    </div>
+  </div>
+  <div class="slide-counter dark">06 / 10</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SLIDE 7 — TECH STACK & SECURITY -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="slide s7">
+  <div class="slide-header">
+    <div class="tag">Architecture & Security</div>
+    <h2>Technology Stack & <span class="gold-sub">Security Features</span></h2>
+  </div>
+  <div class="two-col">
+    <div class="tech-panel">
+      <div class="panel-title">🛠 Technology Stack</div>
+      <div class="tech-item"><span class="arrow">▸</span><span class="text">Single-file HTML — no frameworks, no dependencies</span></div>
+      <div class="tech-item"><span class="arrow">▸</span><span class="text">Vanilla JavaScript — maximum browser compatibility</span></div>
+      <div class="tech-item"><span class="arrow">▸</span><span class="text">Google Apps Script — serverless backend</span></div>
+      <div class="tech-item"><span class="arrow">▸</span><span class="text">Google Sheets API — real-time database</span></div>
+      <div class="tech-item"><span class="arrow">▸</span><span class="text">Gmail API — branded email delivery</span></div>
+      <div class="tech-item"><span class="arrow">▸</span><span class="text">GitHub Pages + Custom Domain (openday.pbis.edu.la)</span></div>
+      <div class="tech-item"><span class="arrow">▸</span><span class="text">Google Translate — 31 language support</span></div>
+      <div class="tech-item"><span class="arrow">▸</span><span class="text">Panoee / Kuula — 360° virtual tour embeds</span></div>
+      <div class="tech-item"><span class="arrow">▸</span><span class="text">Zero monthly cost — built on free-tier services</span></div>
+    </div>
+    <div class="tech-panel">
+      <div class="panel-title">🔒 Security Features</div>
+      <div class="tech-item"><span class="arrow">▸</span><span class="text">SHA-256 hashed password — never stored in plain text</span></div>
+      <div class="tech-item"><span class="arrow">▸</span><span class="text">5-attempt lockout with 60-second cooldown</span></div>
+      <div class="tech-item"><span class="arrow">▸</span><span class="text">2-hour session expiry with automatic logout</span></div>
+      <div class="tech-item"><span class="arrow">▸</span><span class="text">XSS protection — all user inputs sanitised</span></div>
+      <div class="tech-item"><span class="arrow">▸</span><span class="text">Rate limiting on form submissions (max 3/hour)</span></div>
+      <div class="tech-item"><span class="arrow">▸</span><span class="text">CORS-safe API calls via URL-encoded POST</span></div>
+      <div class="tech-item"><span class="arrow">▸</span><span class="text">Pending mutations queue — data integrity protected</span></div>
+      <div class="tech-item"><span class="arrow">▸</span><span class="text">Safari-compatible — delegated event system</span></div>
+      <div class="tech-item"><span class="arrow">▸</span><span class="text">Data stored only in Google Sheets & Gmail — PBIS-owned</span></div>
+    </div>
+  </div>
+  <div class="slide-counter">07 / 10</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SLIDE 8 — END-TO-END JOURNEY -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="slide s8">
+  <div class="slide-header">
+    <div class="tag">End-to-End Journey</div>
+    <h2>From Parent Discovery to <span class="gold-sub">Enrolled Student</span></h2>
+  </div>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-top" style="background:#0a3d20;">
+        <div class="step-num">1</div>
+        <div class="step-title">🌐 Parent Discovers</div>
+      </div>
+      <div class="step-desc">Visits openday.pbis.edu.la via social media, WhatsApp, Google Search or referral</div>
+    </div>
+    <div class="step-card">
+      <div class="step-top" style="background:#1a4a2a;">
+        <div class="step-num">2</div>
+        <div class="step-title">👀 Explores Page</div>
+      </div>
+      <div class="step-desc">Views campus photos, 360° virtual tour, promotions, and Open Day details</div>
+    </div>
+    <div class="step-card">
+      <div class="step-top" style="background:#2a5a3a;">
+        <div class="step-num">3</div>
+        <div class="step-title">📝 Registers</div>
+      </div>
+      <div class="step-desc">Fills registration form. Auto-email sent to parent. Admissions team notified instantly.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-top" style="background:#0a3d20;">
+        <div class="step-num">4</div>
+        <div class="step-title">⚙️ Team Reviews</div>
+      </div>
+      <div class="step-desc">Admissions team logs into dashboard. Approves, Declines, or Reschedules.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-top" style="background:#1a5a30;">
+        <div class="step-num">5</div>
+        <div class="step-title">✅ Parent Confirmed</div>
+      </div>
+      <div class="step-desc">Branded confirmation email sent. Visit details, map link, and contact info.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-top" style="background:#2a6a40;">
+        <div class="step-num">6</div>
+        <div class="step-title">🏫 Open Day Visit</div>
+      </div>
+      <div class="step-desc">Family attends. Enrollment status tracked in Pipeline. Overdue flagged if absent.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-top" style="background:#0a4020;">
+        <div class="step-num">7</div>
+        <div class="step-title">💌 Follow-Up</div>
+      </div>
+      <div class="step-desc">No-shows receive personalised "We Missed You" email. Private tour offered.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-top" style="background:#0a5030;">
+        <div class="step-num">8</div>
+        <div class="step-title">🎓 Enrolled</div>
+      </div>
+      <div class="step-desc">Family enrols. Status updated to Enrolled across all Google Sheets tabs.</div>
+    </div>
+  </div>
+  <div class="slide-counter dark">08 / 10</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SLIDE 9 — DEPLOYMENT -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="slide s9">
+  <div class="slide-header">
+    <div class="tag">Deployment & Access</div>
+    <h2>Live System — <span class="gold-sub">Accessible Now</span></h2>
+  </div>
+  <div class="deploy-grid">
+    <div class="deploy-card">
+      <div class="deploy-label">🌐 Live URL</div>
+      <div class="deploy-val">openday.pbis.edu.la</div>
+    </div>
+    <div class="deploy-card">
+      <div class="deploy-label">📅 Open Day Date</div>
+      <div class="deploy-val">Wednesday, 8 July 2026 · 9:30 AM – 11:30 AM</div>
+    </div>
+    <div class="deploy-card">
+      <div class="deploy-label">💻 GitHub Repository</div>
+      <div class="deploy-val">sompasertritthisak-ui.github.io</div>
+    </div>
+    <div class="deploy-card">
+      <div class="deploy-label">📍 Campus</div>
+      <div class="deploy-val">Primary Campus · Saphanthong Neua, Sisattanak, Vientiane</div>
+    </div>
+    <div class="deploy-card">
+      <div class="deploy-label">🔒 Admin Dashboard</div>
+      <div class="deploy-val">Password-protected · Admissions team only · SHA-256 secured</div>
+    </div>
+    <div class="deploy-card">
+      <div class="deploy-label">📧 Notifications</div>
+      <div class="deploy-val">admissions@pbis.edu.la — new registrations only</div>
+    </div>
+    <div class="deploy-card">
+      <div class="deploy-label">📊 Google Sheets</div>
+      <div class="deploy-val">PBIS Open Day 2026 Leads — 4 tabs, real-time sync</div>
+    </div>
+    <div class="deploy-card">
+      <div class="deploy-label">🚀 Update Process</div>
+      <div class="deploy-val">Push to GitHub → Live on openday.pbis.edu.la within 3–5 minutes</div>
+    </div>
+  </div>
+  <div class="slide-counter">09 / 10</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- SLIDE 10 — CLOSING -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="slide s10">
+  <div class="gold-top"></div>
+  <div class="gold-bottom"></div>
+  <div class="glow-tr"></div>
+  <div class="glow-bl"></div>
+  <div class="center-content">
+    <div class="badge">EST. 2001 &nbsp;·&nbsp; 25TH ANNIVERSARY</div>
+    <div class="school">Panyathip British International School</div>
+    <div class="motto">"Become the best you can be."</div>
+    <div class="gold-bar"></div>
+    <div class="sys-title">PBIS Open Day 2026 — Digital Admissions System</div>
+    <div class="outcomes">
+      <div class="outcome-box">
+        <div class="o-icon">🎯</div>
+        <div class="o-text">Zero-cost<br>infrastructure</div>
+      </div>
+      <div class="outcome-box">
+        <div class="o-icon">⚡</div>
+        <div class="o-text">Real-time<br>lead tracking</div>
+      </div>
+      <div class="outcome-box">
+        <div class="o-icon">📧</div>
+        <div class="o-text">Fully automated<br>email system</div>
+      </div>
+      <div class="outcome-box">
+        <div class="o-icon">📱</div>
+        <div class="o-text">Mobile-first<br>parent experience</div>
+      </div>
+      <div class="outcome-box">
+        <div class="o-icon">🔒</div>
+        <div class="o-text">Enterprise-grade<br>security</div>
+      </div>
+    </div>
+    <div class="credits">Developed by: Marketing & Media Team &nbsp;·&nbsp; Panyathip British International School &nbsp;·&nbsp; Vientiane, Lao PDR</div>
+  </div>
+  <div class="slide-counter">10 / 10</div>
+</div>
+
+</body>
+</html>
